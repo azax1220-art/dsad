@@ -96,6 +96,20 @@
     .info li { display: grid; grid-template-columns: 84px 1fr; padding: 14px 0; border-bottom: 1px solid var(--line); }
     .info li b { font-weight: 500; }
 
+    .price { font-weight: 400; color: var(--accent); white-space: nowrap; }
+    .note { font-size: .82rem; color: var(--ink-soft); margin-top: 20px; }
+    .photo.wide { aspect-ratio: 21 / 9; margin-bottom: 28px; }
+    .branches { display: grid; gap: 32px; }
+    .branch h3 { font-size: 1.25rem; font-weight: 500; }
+    .branch .btn { margin-top: 18px; }
+    .guide { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--line); }
+    .guide h3 { font-size: 1.1rem; font-weight: 500; margin-bottom: 8px; }
+    .guide ul { padding-left: 1.2em; color: var(--ink-soft); font-size: .92rem; }
+
+    @media (min-width: 720px) {
+      .branches { grid-template-columns: 1fr 1fr; gap: 48px; }
+    }
+
     /* 5. 예약·문의 */
     .contact-buttons { display: grid; gap: 12px; }
     .contact-buttons .btn { min-height: 56px; font-size: 1.05rem; text-align: center; }
@@ -153,13 +167,14 @@
         <div class="eyebrow">Menu</div>
         <h2>대표 메뉴</h2>
         <div class="menu-grid">
-          <div class="menu-item"><img class="photo" src="images/menu-egg-benedict.jpg" alt="에그 베네딕트" loading="lazy"><h3>에그 베네딕트</h3><p>가격 <span class="todo">[확인 필요]</span></p></div>
-          <div class="menu-item"><img class="photo" src="images/menu-salmon-benedict.jpg" alt="연어 베네딕트" loading="lazy"><h3>연어 베네딕트</h3><p>가격 <span class="todo">[확인 필요]</span></p></div>
-          <div class="menu-item"><img class="photo" src="images/menu-bulgogi-pizza.jpg" alt="불고기 새싹 피자" loading="lazy"><h3>불고기 새싹 피자</h3><p>가격 <span class="todo">[확인 필요]</span></p></div>
-          <div class="menu-item"><img class="photo" src="images/menu-rose-pasta.jpg" alt="로제 파스타" loading="lazy"><h3>로제 파스타</h3><p>가격 <span class="todo">[확인 필요]</span></p></div>
-          <div class="menu-item"><img class="photo" src="images/menu-cafentree-latte.jpg" alt="카펜트리 라떼" loading="lazy"><h3>카펜트리 라떼</h3><p>가격 <span class="todo">[확인 필요]</span></p></div>
-          <div class="menu-item"><img class="photo" src="images/menu-croffle.jpg" alt="크로플" loading="lazy"><h3>크로플</h3><p>가격 <span class="todo">[확인 필요]</span></p></div>
+          <div class="menu-item"><img class="photo" src="images/menu-egg-benedict.jpg" alt="에그 베네딕트" loading="lazy"><h3>에그 베네딕트<span class="price">14,800</span></h3><p>빵 위에 수란과 홀랜다이즈 소스를 올린 브런치</p></div>
+          <div class="menu-item"><img class="photo" src="images/menu-salmon-benedict.jpg" alt="연어 베네딕트" loading="lazy"><h3>연어 베네딕트<span class="price">15,300</span></h3><p>햄 대신 연어를 올린 베네딕트</p></div>
+          <div class="menu-item"><img class="photo" src="images/menu-bulgogi-pizza.jpg" alt="불고기 새싹 피자" loading="lazy"><h3>불고기 새싹 피자<span class="price">19,800</span></h3><p>수제 도우와 자연치즈로 굽는 피자</p></div>
+          <div class="menu-item"><img class="photo" src="images/menu-rose-pasta.jpg" alt="로제 파스타" loading="lazy"><h3>로제 파스타<span class="price">15,300</span></h3></div>
+          <div class="menu-item"><img class="photo" src="images/menu-cafentree-latte.jpg" alt="카펜트리 라떼" loading="lazy"><h3>카펜트리 라떼<span class="price">7,800</span></h3><p>나무 그림이 올라간 진한 말차 라떼 (ICE)</p></div>
+          <div class="menu-item"><img class="photo" src="images/menu-croffle.jpg" alt="크로플" loading="lazy"><h3>아이스크림 크로플<span class="price">12,500</span></h3></div>
         </div>
+        <p class="note">가격은 화도점 메뉴판(2026년 3월) 기준이며, 지점마다 다를 수 있어요. 세트 메뉴도 있어요.</p>
       </div>
     </section>
 
@@ -184,20 +199,38 @@
       <div class="wrap">
         <div class="eyebrow">Visit</div>
         <h2>오시는 길</h2>
-        <div class="visit">
-          <img class="photo" src="images/store-exterior.jpg" alt="카펜트리 매장 외관" loading="lazy">
-          <div>
+        <img class="photo wide" src="images/store-exterior.jpg" alt="카펜트리 매장 외관" loading="lazy">
+        <div class="branches">
+          <div class="branch">
+            <h3>화도점</h3>
             <ul class="info">
               <li><b>주소</b><span>경기도 남양주시 <span class="todo">[상세 주소 확인 필요]</span></span></li>
               <li><b>영업시간</b><span class="todo">[확인 필요]</span></li>
-              <li><b>휴무일</b><span class="todo">[확인 필요]</span></li>
+              <li><b>식사 마감</b><span>오후 8시 (라스트오더)</span></li>
               <li><b>주차</b><span class="todo">[확인 필요]</span></li>
             </ul>
-            <div class="buttons">
-              <!-- 정확한 매장 링크를 받으면 교체 -->
-              <a class="btn solid" href="https://map.naver.com/p/search/%EB%82%A8%EC%96%91%EC%A3%BC%20%EC%B9%B4%ED%8E%9C%ED%8A%B8%EB%A6%AC" target="_blank" rel="noopener">네이버 지도에서 보기</a>
-            </div>
+            <a class="btn solid" href="https://map.naver.com/p/search/%EC%B9%B4%ED%8E%9C%ED%8A%B8%EB%A6%AC%20%ED%99%94%EB%8F%84%EC%A0%90" target="_blank" rel="noopener">네이버 지도에서 보기</a>
           </div>
+          <div class="branch">
+            <h3>진접점</h3>
+            <ul class="info">
+              <li><b>주소</b><span>경기도 남양주시 <span class="todo">[상세 주소 확인 필요]</span></span></li>
+              <li><b>영업시간</b><span class="todo">[확인 필요]</span></li>
+              <li><b>주차</b><span class="todo">[확인 필요]</span></li>
+            </ul>
+            <a class="btn solid" href="https://map.naver.com/p/search/%EC%B9%B4%ED%8E%9C%ED%8A%B8%EB%A6%AC%20%EC%A7%84%EC%A0%91%EC%A0%90" target="_blank" rel="noopener">네이버 지도에서 보기</a>
+          </div>
+        </div>
+        <div class="guide">
+          <h3>이용 안내</h3>
+          <ul>
+            <li>테이블의 QR코드로 주문하면 자리로 가져다 드려요.</li>
+            <li>반려동물은 유모차나 가방에 태우면 함께 들어올 수 있어요. 매장에 이동장도 있어요.</li>
+            <li>외부 음식은 가져올 수 없어요.</li>
+            <li>아이를 위한 색칠공부, 어른을 위한 스도쿠가 준비되어 있어요.</li>
+            <li>흡연은 지정된 구역에서만 가능해요.</li>
+          </ul>
+          <p class="note">화도점 이용안내 기준이에요.</p>
         </div>
       </div>
     </section>
@@ -220,7 +253,7 @@
   <footer>
     <div class="wrap">
       <span class="logo">CAFENTREE</span>
-      카펜트리 · 경기도 남양주시 [주소 확인 필요]<br>
+      카펜트리 · 남양주 화도점 · 진접점<br>
       연락처 [확인 필요] · 인스타그램 [확인 필요]<br>
       © 카펜트리
     </div>
